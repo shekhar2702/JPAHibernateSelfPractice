@@ -15,16 +15,31 @@ public class Main {
 //            card1.setActive(true);
 //            card1.setIssuedDate(new Date());
 //            card1.setFirmwareVersion("kuch bhi 1");
-//        AccessCard card2 = new AccessCard();
+//        Employee employee = entityManager.find(Employee.class,67);
+//        System.out.println("(((((((((((((((((((((((((");
+//        System.out.println(employee);
+//        System.out.println(")))))))))))))))))))))))))");
+        AccessCard card2 = entityManager.find(AccessCard.class,68);
+
+       System.out.println(card2);
 //        card2.setActive(false);
 //        card2.setIssuedDate(new Date());
-//        card2.setFirmwareVersion("kuch bhi 2");
-//        AccessCard card = entityManager.find(AccessCard.class,5);
-        Employee employee = entityManager.find(Employee.class,34);
+//        card2.setFirmwareVersion("kuch bhi 112");
+////        AccessCard card = entityManager.find(AccessCard.class,5);
+////        Employee employee = entityManager.find(Employee.class,34);
+//
+//        Employee employee = new Employee();
+//        employee.setName("Kuch Bhi901");
+//        employee.setDob(new Date());
+//        employee.setSsn("dcwdwc");
+//        employee.setType(EmployeeType.PART_TIME);
+//        employee.setAge(10);
+//
+//        employee.setAccessCard(card2);
+////        employee.setAccessCard(card);
 //        employee.setAccessCard(card);
-//        employee.setAccessCard(card);
-System.out.println(employee.getName());
-System.out.println(employee.getAccessCard());
+//System.out.println(employee.getName());
+//System.out.println(employee.getAccessCard());
 //
 //        Employee employee2 = entityManager.find(Employee.class,2);
 ////        Employee employee3 = entityManager.find(Employee.class,9);
@@ -53,8 +68,8 @@ System.out.println(employee.getAccessCard());
 //        EntityTransaction transaction = entityManager.getTransaction();
 //        transaction.begin();
 ////        entityManager.persist(employee);
-////        entityManager.persist(card1);
-//        entityManager.persist(employee);
+//        entityManager.persist(card2);
+////        entityManager.persist(employee);
 //        transaction.commit();
 //        jdbc:h2:~/test
     }

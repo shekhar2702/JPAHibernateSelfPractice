@@ -3,6 +3,7 @@ package org.example;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.Date;
 
 @Entity
@@ -11,6 +12,17 @@ public class AccessCard {
     @Id
     @GeneratedValue
     private int id;
+
+    @OneToOne(mappedBy = "accessCard")
+    private Employee employee;
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
 
     private boolean isActive;
     private Date issuedDate;
@@ -36,6 +48,7 @@ public class AccessCard {
     public String toString() {
         return "AccessCard{" +
                 "id=" + id +
+//                ", employee=" + employee +
                 ", isActive=" + isActive +
                 ", issuedDate=" + issuedDate +
                 ", firmwareVersion='" + firmwareVersion + '\'' +

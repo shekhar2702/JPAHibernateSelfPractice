@@ -20,7 +20,7 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private EmployeeType type;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     private AccessCard accessCard;
 
     public AccessCard getAccessCard() {
