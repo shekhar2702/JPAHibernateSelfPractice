@@ -53,15 +53,15 @@ public class Employee {
     @Temporal(TemporalType.TIME)
     private Date dob;
 
-    public BigDecimal getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(BigDecimal age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    private BigDecimal age;
+    private int age;
 
     @Column(nullable = false,unique = true)
     private String ssn;
