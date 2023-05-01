@@ -15,8 +15,8 @@ public class Main {
         Employee employee2 = entityManager.find(Employee.class,2);
 //        Employee employee3 = entityManager.find(Employee.class,9);
         System.out.println(employee2);
-        employee2.setAge(17);
-        System.out.println(employee2);
+//        employee2.setAge(17);
+//        System.out.println(employee2);
         //update operation is based on primary key id here.If this id doesn't exist for a record then a new row is created else row is just updated.
 //        System.out.println(employee2);
 //        System.out.println(employee3);
@@ -39,7 +39,7 @@ public class Main {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
 //        entityManager.persist(employee);
-        entityManager.persist(employee2);
+        entityManager.remove(employee2);
         transaction.commit();
 //        jdbc:h2:~/test
     }
