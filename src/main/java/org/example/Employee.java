@@ -20,6 +20,17 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private EmployeeType type;
 
+    @OneToOne
+    private AccessCard accessCard;
+
+    public AccessCard getAccessCard() {
+        return accessCard;
+    }
+
+    public void setAccessCard(AccessCard accessCard) {
+        this.accessCard = accessCard;
+    }
+
     @Transient
     private String dontPersistThis;
 

@@ -10,7 +10,7 @@ public class AccessCard {
 
     @Id
     @GeneratedValue
-    private Long id;
+    private int id;
 
     private boolean isActive;
     private Date issuedDate;
@@ -40,11 +40,11 @@ public class AccessCard {
         this.firmwareVersion = firmwareVersion;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 }

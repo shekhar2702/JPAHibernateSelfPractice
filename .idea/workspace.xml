@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85d294d-c297-4196-a5ba-e8c5e61693d3" name="Changes" comment="JPA and Hibernate learning.">
+    <list default="true" id="b85d294d-c297-4196-a5ba-e8c5e61693d3" name="Changes" comment="JPA and Hibernate learning - Multiple entities relationship initial setup">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AccessCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AccessCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,7 +94,8 @@
       <workItem from="1682237573179" duration="12976000" />
       <workItem from="1682856184260" duration="4222000" />
       <workItem from="1682936413739" duration="624000" />
-      <workItem from="1682947572890" duration="1626000" />
+      <workItem from="1682947572890" duration="3495000" />
+      <workItem from="1682957797989" duration="1120000" />
     </task>
     <task id="LOCAL-00001" summary="JPA and Hibernate learning.">
       <created>1682863203497</created>
@@ -102,7 +104,28 @@
       <option name="project" value="LOCAL" />
       <updated>1682863203497</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="JPA and Hibernate learning - update operation and create operation">
+      <created>1682949739279</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682949739279</updated>
+    </task>
+    <task id="LOCAL-00003" summary="JPA and Hibernate learning - delete operation">
+      <created>1682950003872</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682950003872</updated>
+    </task>
+    <task id="LOCAL-00004" summary="JPA and Hibernate learning - Multiple entities relationship initial setup">
+      <created>1682950791923</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682950791923</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +133,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="JPA and Hibernate learning." />
-    <option name="LAST_COMMIT_MESSAGE" value="JPA and Hibernate learning." />
+    <MESSAGE value="JPA and Hibernate learning - update operation and create operation" />
+    <MESSAGE value="JPA and Hibernate learning - delete operation" />
+    <MESSAGE value="JPA and Hibernate learning - Multiple entities relationship initial setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="JPA and Hibernate learning - Multiple entities relationship initial setup" />
   </component>
 </project>
