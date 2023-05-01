@@ -32,6 +32,16 @@ public class AccessCard {
         this.issuedDate = issuedDate;
     }
 
+    @Override
+    public String toString() {
+        return "AccessCard{" +
+                "id=" + id +
+                ", isActive=" + isActive +
+                ", issuedDate=" + issuedDate +
+                ", firmwareVersion='" + firmwareVersion + '\'' +
+                '}';
+    }
+
     public String getFirmwareVersion() {
         return firmwareVersion;
     }

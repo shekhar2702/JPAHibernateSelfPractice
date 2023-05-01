@@ -19,11 +19,12 @@ public class Main {
 //        card2.setActive(false);
 //        card2.setIssuedDate(new Date());
 //        card2.setFirmwareVersion("kuch bhi 2");
-        AccessCard card = entityManager.find(AccessCard.class,5);
+//        AccessCard card = entityManager.find(AccessCard.class,5);
         Employee employee = entityManager.find(Employee.class,34);
-        employee.setAccessCard(card);
 //        employee.setAccessCard(card);
-
+//        employee.setAccessCard(card);
+System.out.println(employee.getName());
+System.out.println(employee.getAccessCard());
 //
 //        Employee employee2 = entityManager.find(Employee.class,2);
 ////        Employee employee3 = entityManager.find(Employee.class,9);
@@ -49,12 +50,12 @@ public class Main {
 //        employee1.setAge(11);
 //        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("myApp");
 //        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = entityManager.getTransaction();
-        transaction.begin();
+//        EntityTransaction transaction = entityManager.getTransaction();
+//        transaction.begin();
+////        entityManager.persist(employee);
+////        entityManager.persist(card1);
 //        entityManager.persist(employee);
-//        entityManager.persist(card1);
-        entityManager.persist(employee);
-        transaction.commit();
+//        transaction.commit();
 //        jdbc:h2:~/test
     }
 }
