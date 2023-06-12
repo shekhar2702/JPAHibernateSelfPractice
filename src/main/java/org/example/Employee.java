@@ -1,9 +1,13 @@
 package org.example;
 
+import org.hibernate.annotations.Fetch;
+
 import javax.persistence.*;
 import javax.xml.crypto.Data;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "EMPLOYEE")
@@ -20,8 +24,30 @@ public class Employee {
     @Enumerated(EnumType.STRING)
     private EmployeeType type;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private AccessCard accessCard;
+
+    public List<PaySlip> getPaySlips() {
+        return paySlips;
+    }
+
+    public void setPaySlips(List<PaySlip> paySlips) {
+        this.paySlips = paySlips;
+    }
+
+    @OneToMany(mappedBy = "employee")
+    List<PaySlip> paySlips;
+
+    @ManyToMany(mappedBy = "employees")
+    private List<EmailGroup> emailGroups = new ArrayList<>();
+
+    public List<EmailGroup> getEmailGroups() {
+        return emailGroups;
+    }
+
+    public void setEmailGroups(List<EmailGroup> emailGroups) {
+        this.emailGroups = emailGroups;
+    }
 
     public AccessCard getAccessCard() {
         return accessCard;
@@ -91,6 +117,7 @@ public class Employee {
                 ", dob=" + dob +
                 ", age=" + age +
                 ", ssn='" + ssn + '\'' +
+//                ", paySlips='" + paySlips + '\'' +
                 '}';
     }
 
@@ -112,5 +139,8 @@ public class Employee {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public void addEmployeeToEmailGroup(EmailGroup emailGroup) {
+        this.emailGroups.add(emailGroup);
     }
 }

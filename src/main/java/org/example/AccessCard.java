@@ -1,9 +1,8 @@
 package org.example;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import org.hibernate.annotations.Fetch;
+
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -13,7 +12,7 @@ public class AccessCard {
     @GeneratedValue
     private int id;
 
-    @OneToOne(mappedBy = "accessCard")
+    @OneToOne(mappedBy = "accessCard",fetch = FetchType.LAZY)
     private Employee employee;
 
     public Employee getEmployee() {
