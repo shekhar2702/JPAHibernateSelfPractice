@@ -35,7 +35,7 @@ public class Employee {
         this.paySlips = paySlips;
     }
 
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "employee",cascade = CascadeType.REMOVE)
     List<PaySlip> paySlips;
 
     @ManyToMany(mappedBy = "employees")

@@ -89,15 +89,22 @@ public class Main {
 //        employee1.setAge(11);
 //        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("myApp");
 //        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Employee employee = entityManager.find(Employee.class,1);
-        EmailGroup emailGroup = entityManager.find(EmailGroup.class,3);
-        employee.addEmployeeToEmailGroup(emailGroup);
-        emailGroup.addEmployeeToEmailGroup(employee);
+
+
+//        Employee employee = entityManager.find(Employee.class,1);
+//        PaySlip paySlip = new PaySlip();
+          EmailGroup emailGroup = entityManager.find(EmailGroup.class,3);
+//        paySlip.setEmployee(employee);
+
+//        EmailGroup emailGroup = entityManager.find(EmailGroup.class,3);
+//        employee.addEmployeeToEmailGroup(emailGroup);
+//        emailGroup.addEmployeeToEmailGroup(employee);
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
-        entityManager.persist(employee);
+        entityManager.remove(emailGroup);
+//        entityManager.persist(paySlip);
 //        entityManager.persist(employee1);
-        entityManager.persist(emailGroup);
+//        entityManager.persist(emailGroup);
 //        entityManager.persist(emailGroup1);
 //        entityManager.persist(card1);
 //        entityManager.persist(paySlip);
