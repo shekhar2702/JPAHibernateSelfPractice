@@ -108,6 +108,38 @@ public class Main {
 //        entityManager.persist(emailGroup1);
 //        entityManager.persist(card1);
 //        entityManager.persist(paySlip);
+
+        /*persistence context as 1st level cache
+        *JPA maintains a cache wherein all the inserts/updates are saved before it actually saves to db.
+        * Although these updated/newly created rows aren't effected in the db we can still retrieve them using java objects.
+        * So in above case lets say we create a nw employee and persist it ,even if we try to retrieve the persisted employee
+        * before it actually got persisted in db we will get the employee object without any problems
+        * because of the persistence context which works as a cache.
+        */
+
+        /*
+        * Entity lifecycle
+        * 1. Transient(Entity has not been yet picked by JPA to manage) -> 2. Manged(Entity is picked up by JPA and JPA now managing it in persistence context).
+        * The above lifecycle transition from 1 -> 2 happens while persisting an entity in the db
+        * However,while fetching an entity from the db,the entity is 1st in the managed state and then it goes into transient state.
+         */
+
+        /*
+        * Detached and Removed are also entity transition states while dealing with removal of an entity from the anaged state.
+        * remove(entity) moves entity from managed to removed state by removing the entity from the persistence context.
+        * it can be brought back by calling persist(entity) again
+        * Remember,any entity which aren't in managed state is going to get saved in db.
+        * In order to force save an entity right when we want it to get saved in db we can use the flush(entity),which updates the entity in the db whenever its called.
+        * Detach state is another state wherein an entity is removed fro the managed state,however here in order to bring it back to manged state we use the method merge(entity)
+         */
+        /*
+        * clear() method is similar to detach(entity) method but clear() clears out all the entities in the managed state whereas detach only clears the passed entity in the argument.
+        * refresh(entity) makes sure to update the managed entity with whatever is there i the db,thereby fetching the latest state from the db and removing the stale/dirty/changed state of managed entity.
+        *
+        */
+
+
+
         transaction.commit();
 //        jdbc:h2:~/test
     }
