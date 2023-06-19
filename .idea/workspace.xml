@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b85d294d-c297-4196-a5ba-e8c5e61693d3" name="Changes" comment="Delete cascading">
+    <list default="true" id="b85d294d-c297-4196-a5ba-e8c5e61693d3" name="Changes" comment="JPA entity lifecycle&#10;Transient,managed,removed,detached&#10;methods - persist,flush,remove,detach,merge,clear,refresh">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EmployeeCreation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JPQLExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AccessCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AccessCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,26 +46,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "database.query.execution",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.JPQLExample">
+    <configuration name="EmployeeCreation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.EmployeeCreation" />
+      <module name="jpa-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JPQLExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.JPQLExample" />
+      <module name="jpa-tutorial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="jpa-tutorial" />
@@ -75,6 +107,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JPQLExample" />
+        <item itemvalue="Application.EmployeeCreation" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -94,6 +128,8 @@
       <workItem from="1682957797989" duration="5439000" />
       <workItem from="1686554565791" duration="11780000" />
       <workItem from="1686591201768" duration="4576000" />
+      <workItem from="1687094946751" duration="3266000" />
+      <workItem from="1687175351366" duration="1063000" />
     </task>
     <task id="LOCAL-00001" summary="JPA and Hibernate learning.">
       <created>1682863203497</created>
@@ -151,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686645156141</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="JPA entity lifecycle&#10;Transient,managed,removed,detached&#10;methods - persist,flush,remove,detach,merge,clear,refresh">
+      <created>1686653579831</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686653579831</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +209,7 @@
     <MESSAGE value="JPA and Hibernate learning - Lazy fetch as opposed to eager fetch" />
     <MESSAGE value="JPA and Hibernate learning - BiDirectional relationship mapping - mapped by relatioship" />
     <MESSAGE value="Delete cascading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete cascading" />
+    <MESSAGE value="JPA entity lifecycle&#10;Transient,managed,removed,detached&#10;methods - persist,flush,remove,detach,merge,clear,refresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="JPA entity lifecycle&#10;Transient,managed,removed,detached&#10;methods - persist,flush,remove,detach,merge,clear,refresh" />
   </component>
 </project>

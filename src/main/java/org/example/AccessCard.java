@@ -1,6 +1,7 @@
 package org.example;
 
 import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -23,6 +24,7 @@ public class AccessCard {
         this.employee = employee;
     }
 
+    @Type(type= "org.hibernate.type.NumericBooleanType")
     private boolean isActive;
     private Date issuedDate;
     private String firmwareVersion;

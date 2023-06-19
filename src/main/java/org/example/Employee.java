@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@NamedQuery(query = "select e from Employee e",name = "kuchBhi")
 @Entity
 @Table(name = "EMPLOYEE")
 public class Employee {
